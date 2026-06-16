@@ -194,6 +194,16 @@ class MyApp extends StatelessWidget {
         darkTheme: AppStyle.darkTheme.copyWith(colorScheme: darkColorScheme),
         themeMode:
             ThemeMode.values[Get.find<AppSettingsController>().themeMode.value],
+        theme: ThemeData(
+            fontFamily: 'Noto Sans SC',  // 指定中文字体
+            fontFamilyFallback: [
+              'Noto Sans SC',
+              'Source Han Sans CN',
+              'PingFang SC',
+              'Heiti SC',
+              'Microsoft YaHei',
+            ],
+          ),
         initialRoute: RoutePath.kIndex,
         getPages: AppPages.routes,
         //国际化
